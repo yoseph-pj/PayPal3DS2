@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "PayPal3DS2",
+    platforms: [
+            .iOS(.v15)         //.v15
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
