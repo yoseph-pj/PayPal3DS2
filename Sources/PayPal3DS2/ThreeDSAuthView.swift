@@ -37,7 +37,7 @@ public struct ThreeDSAuthView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isNavigationBarHidden = true
 
-    func validateUserOTP() async {
+    public func validateUserOTP() async {
 
        // goHomePage()
 
@@ -223,7 +223,7 @@ public struct ThreeDSAuthView: View {
           //      .navigate(to: ContentView(), hideNavBar: true, when: $willMoveToNextScreen)
     }
 
-    func goHomePage(verify: Bool ) async {
+  public  func goHomePage(verify: Bool ) async {
         let seconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             // Put your code which should be executed with a delay here
@@ -244,7 +244,7 @@ struct ThreeDSAuthView_Previews: PreviewProvider {
     }
 }
 
-extension View {
+public extension View {
     /// Navigate to a new view.
     /// - Parameters:
     ///   - view: View to navigate to.

@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ActivityIndicator: UIViewRepresentable {
+public struct ActivityIndicator: UIViewRepresentable {
     @Binding var shouldAnimate: Bool
     var color: UIColor
     //ActivityIndicator(isAnimating: $isShowing, style: .large)
-    func makeUIView(context: Context) -> UIActivityIndicatorView {
+  public  func makeUIView(context: Context) -> UIActivityIndicatorView {
         return UIActivityIndicatorView(style: .large)
     }
 
-    func updateUIView(_ uiView: UIActivityIndicatorView,
+   public func updateUIView(_ uiView: UIActivityIndicatorView,
                       context: Context) {
         if self.shouldAnimate {
             uiView.color = color

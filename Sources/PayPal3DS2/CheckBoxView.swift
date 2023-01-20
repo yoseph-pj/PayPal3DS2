@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CheckBoxView: View {
+public struct CheckBoxView: View {
     @Binding var checked: Bool
-        var body: some View {
+    public  var body: some View {
             Image(systemName: checked ? "checkmark.square.fill" : "square")
                 .foregroundColor(checked ? Color.gray : Color.black)
                 .onTapGesture {
@@ -18,7 +18,7 @@ struct CheckBoxView: View {
         }
 }
 
-extension View {
+public extension View {
   @ViewBuilder func hidden(_ shouldHide: Bool) -> some View {
     switch shouldHide {
       case true: self.hidden()
