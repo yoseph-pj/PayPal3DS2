@@ -47,14 +47,14 @@ public struct ThreeDSAuthView: View {
     public var body: some View {
 
                 VStack {
-                    VStack {
+                  /*  VStack {
                         Image("Paypal")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .imageScale(.large)
                             .frame(width: 600, height: 150).padding()
                             .shadow(radius: 10)
-                    }
+                    }*/
 
                 Text("Enter otp code")
                     .font(.largeTitle)
