@@ -1,2 +1,3 @@
 # PayPal3DS2
-SDK model
+
+A description of this package.
