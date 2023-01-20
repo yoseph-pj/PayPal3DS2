@@ -36,6 +36,8 @@ public struct ThreeDSAuthView: View {
 
     @Environment(\.presentationMode) var presentationMode
     @State private var isNavigationBarHidden = true
+    
+    public init() {}
 
     public func validateUserOTP() async {
 
