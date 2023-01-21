@@ -240,11 +240,11 @@ public struct ThreeDSAuthView: View {
 }
 
 
-public struct ThreeDSAuthView_Previews: PreviewProvider {
+/*public struct ThreeDSAuthView_Previews: PreviewProvider {
     public static var previews: some View {
         ThreeDSAuthView()
     }
-}
+}*/
 
 public extension View {
     /// Navigate to a new view.

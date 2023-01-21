@@ -9,6 +9,7 @@ import SwiftUI
 
 public struct CheckBoxView: View {
     @Binding var checked: Bool
+    
     public  var body: some View {
             Image(systemName: checked ? "checkmark.square.fill" : "square")
                 .foregroundColor(checked ? Color.gray : Color.black)
@@ -27,8 +28,9 @@ public extension View {
   }
 }
 
-struct CheckBoxView_Previews: PreviewProvider {
+/*struct CheckBoxView_Previews: PreviewProvider {
     static var previews: some View {
         CheckBoxView(checked: .constant(false))
     }
 }
+*/
