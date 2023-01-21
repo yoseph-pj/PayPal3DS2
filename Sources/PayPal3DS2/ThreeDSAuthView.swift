@@ -37,11 +37,15 @@ public struct ThreeDSAuthView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isNavigationBarHidden = true
     
-    public init() {}
+    private var callingView: any View
+    
+    public init(calllingView: any View) {
+        self.callingView = calllingView
+    }
 
     public func validateUserOTP() async {
 
-       // goHomePage()
+        //goHomePage()
 
     }
     public var body: some View {
@@ -222,7 +226,7 @@ public struct ThreeDSAuthView: View {
                     self.isNavigationBarHidden = true
                 }
 
-          //      .navigate(to: ContentView(), hideNavBar: true, when: $willMoveToNextScreen)
+                .navigate(to: AnyView(self.callingView), hideNavBar: true, when: $willMoveToNextScreen)
     }
 
   public  func goHomePage(verify: Bool ) async {
