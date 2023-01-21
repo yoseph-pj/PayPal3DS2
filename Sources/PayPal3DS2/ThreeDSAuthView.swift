@@ -159,10 +159,10 @@ public struct ThreeDSAuthView: View {
                         }}) {
                             HStack(alignment: .center) {
                                 Spacer()
-                               /* ZStack {
+                                ZStack {
                                     ActivityIndicator(shouldAnimate: self.$shouldAnimate, color: UIColor(Color.white))
                                     Text("Verify").foregroundColor(Color.white).bold()
-                                }*/
+                                }
                                 Spacer()
                             }
                         }.overlay(
@@ -181,10 +181,10 @@ public struct ThreeDSAuthView: View {
                         }}) {
                             HStack(alignment: .center) {
                                 Spacer()
-                              /*  ZStack {
+                                ZStack {
                                     ActivityIndicator(shouldAnimate: self.$shouldResend, color: UIColor(Color.white))
                                     Text("Resend").foregroundColor(Color.white).bold()
-                                }*/
+                                }
                                 Spacer()
                             }
                         }.overlay(
@@ -198,14 +198,14 @@ public struct ThreeDSAuthView: View {
 
                         VStack {
                             //HStack(alignment: .top) {
-                           /* HStack {
+                            HStack {
                                 CheckBoxView(checked: $emailChecked).padding()
                                 Text("Send to email yy**.yahoo.com").foregroundColor(.blue)
                             }
                             HStack {
                                 CheckBoxView(checked: $phoneChecked).padding()
                                 Text("Send to phone .         ***-***-5608").foregroundColor(.blue)
-                            }*/
+                            }
                         }.font(.headline).foregroundColor(Color.white)
 
                 }}.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center).background(.white)
