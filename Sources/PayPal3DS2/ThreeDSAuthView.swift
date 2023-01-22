@@ -13,6 +13,7 @@ public struct CardInfo {
     var name: String
     var type: String
     var cardNumber: String
+    var threeDS2: String
     var cvv: String
     var postalCode: String
     var expirationDate: String
@@ -248,8 +249,11 @@ public struct ThreeDSAuthView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             // Put your code which should be executed with a delay here
             if verify {
+                self.cardInfo.threeDS2 = self.enterdValue
                 self.shouldAnimate.toggle()
+                self.completion(self.cardInfo)
                 self.willMoveToNextScreen.toggle()
+                
             } else {
                 self.shouldResend.toggle()
             }
