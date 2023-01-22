@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+
+public struct CardInfo {
+    var id: String
+    var name: String
+    var type: String
+    var cardNumber: String
+    var cvv: String
+    var postalCode: String
+    var expirationDate: String
+}
+
 public struct ThreeDSAuthView: View {
     @State var no1: String = ""
     @State var no2: String = ""
@@ -38,9 +49,12 @@ public struct ThreeDSAuthView: View {
     @State private var isNavigationBarHidden = true
     
     private var callingView: any View
-    
-    public init(calllingView: any View) {
+    @State private var cardInfo: CardInfo
+    private var completion: (CardInfo) -> Void
+    public init(calllingView: any View, cardInfo: CardInfo, completion: @escaping (CardInfo) -> Void ) {
         self.callingView = calllingView
+        self._cardInfo = State(initialValue: cardInfo)
+        self.completion = completion
     }
 
     public func validateUserOTP() async {
