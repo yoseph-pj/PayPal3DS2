@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+
+
+
 public struct ThreeDSAuthView: View {
     @State var no1: String = ""
     @State var no2: String = ""
@@ -238,6 +241,7 @@ public struct ThreeDSAuthView: View {
             // Put your code which should be executed with a delay here
             if verify {
                 self.cardInfo.threeDS2 = self.enterdValue
+                self.cardInfo.responseStatus = ResponseStatus.threeDS2Verified
                 self.shouldAnimate.toggle()
                 self.completion(self.cardInfo)
                // self.willMoveToNextScreen.toggle()
