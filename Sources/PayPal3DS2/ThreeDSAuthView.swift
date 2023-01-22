@@ -17,6 +17,17 @@ public struct CardInfo {
     var cvv: String
     var postalCode: String
     var expirationDate: String
+    
+    public init (id: String, name: String, type: String, cardNumber: String, threeDS2: String, cvv: String, postalCode: String, expirationDate: String) {
+        self.id = id
+        self.name = name
+        self.type = type
+        self.cardNumber = cardNumber
+        self.threeDS2 = threeDS2
+        self.cvv = cvv
+        self.postalCode = postalCode
+        self.expirationDate = expirationDate
+    }
 }
 
 public struct ThreeDSAuthView: View {
