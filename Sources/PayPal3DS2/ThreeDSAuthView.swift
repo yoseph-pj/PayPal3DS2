@@ -9,14 +9,14 @@ import SwiftUI
 
 
 public struct CardInfo {
-    var id: String
-    var name: String
-    var type: String
-    var cardNumber: String
-    var threeDS2: String
-    var cvv: String
-    var postalCode: String
-    var expirationDate: String
+    public var id: String
+    public var name: String
+    public var type: String
+    public var cardNumber: String
+    public var threeDS2: String
+    public var cvv: String
+    public var postalCode: String
+    public var expirationDate: String
     
     public init (id: String, name: String, type: String, cardNumber: String, threeDS2: String, cvv: String, postalCode: String, expirationDate: String) {
         self.id = id
