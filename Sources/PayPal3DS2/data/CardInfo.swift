@@ -17,7 +17,7 @@ public enum ResponseStatus {
 }
 
 extension ResponseStatus {
-    var statusMessage: String {
+   public var statusMessage: String {
         switch self {
         case .cardNotSetup:
             return "3DS2 is not configured for this card."
