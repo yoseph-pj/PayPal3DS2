@@ -252,7 +252,7 @@ public struct ThreeDSAuthView: View {
                     self.isNavigationBarHidden = true
                 }
 
-                .navigate(to: AnyView(self.callingView), hideNavBar: true, when: $willMoveToNextScreen)
+              //  .navigate(to: AnyView(self.callingView), hideNavBar: true, when: $willMoveToNextScreen)
     }
 
   public  func goHomePage(verify: Bool ) async {
@@ -263,7 +263,7 @@ public struct ThreeDSAuthView: View {
                 self.cardInfo.threeDS2 = self.enterdValue
                 self.shouldAnimate.toggle()
                 self.completion(self.cardInfo)
-                self.willMoveToNextScreen.toggle()
+               // self.willMoveToNextScreen.toggle()
                 
             } else {
                 self.shouldResend.toggle()
